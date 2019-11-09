@@ -7,7 +7,7 @@ def nyuryoku(teban,row,soutesu,sente,basyo):
     for i, name in enumerate(basyo,1):
         print('{:02}_{}'.format(i,basyo[i-1]))
     basyo_utu=list(map(int,input("どこに打つか番号を入力してください：").split()))
-    if (len(basyo_utu)==1 and basyo_utu[0]>len(basyo)) or len(basyo_utu)>1:
+    if (len(basyo_utu)==1 and (basyo_utu[0]>len(basyo) or basyo_utu[0]==0)) or len(basyo_utu)>1:
         basyo_utu=[]
 
     while len(basyo_utu)==0:
